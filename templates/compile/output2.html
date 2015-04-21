@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body bgcolor="#E6E6FA">
+<body>
+ <br>
+
+ <div class="input" align="center">
+  <p align="right"><strong><i>compile on</i></strong></p>
+ <textarea rows="8" cols="75" readonly>{{ source }}</textarea>
+ <textarea rows="8" cols="50" readonly>{{ input }}</textarea>
+ </div>
+ <div class="output" align="center">
+ <p><strong>ouput details of your submission : </strong></p>
+ {% if result == 11 %}
+  <br><textarea rows="15" cols="125" readonly>program encountered a compilation error details :::&#13;&#13;&#13;&#13;{{ cmpinfo }}</textarea><br> 
+ {% elif result == 15 %}
+  <textarea rows="15" cols="125" readonly>{{ output }}</textarea>
+ {% elif result == 12 %}
+  <p><textarea rows="15" cols="125">Runtime error</textarea></p>
+ {% elif result == 13 %}
+  <p><textarea rows="15" cols="125">time limit exceeded</textarea></p>
+ {% elif result == 19 %}
+  <p><textarea rows="15" cols="125">illegal system call</textarea></p>
+ {% elif result == 17 %}
+  <p><textarea rows="15" cols="125">memory limit exceeded</textarea></p>
+ {% elif result == 20 %}
+  <p><textarea rows="15" cols="125">internal error @idone - resubmit and if not resolved then please contact us at contact@ideone.com </textarea></p>
+ {% endif %}
+ <p>execution time : &nbsp;{{ time }} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Memory usage : &nbsp; &nbsp;{{ memory }}&nbsp; <strong>Kbs</strong></p><br>
+ 
+<button onclick="window.location.href='{% url 'home' %}'">submit another code</button>
+
+
+<footer align="right">
+  <p>Made by:<a href="https://www.facebook.com/dhruv.sharma.756412">Dhruv Sharma</a> 
+   <br>Thanks to <a href="http://ideone.com/">Ideone</a> 
+  </p>
+</footer>
+
+</body>
+</html>
+ 
+
+<!--
+	&#10; - Line Feed and &#13;
+
+-->

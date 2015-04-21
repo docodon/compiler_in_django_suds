@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	
+		<body bgcolor="#E6E6FA">
+		<form action="" method="POST">
+              {% csrf_token %}
+       <div class="lang" align="left" style="margin-left: 315px; margin-top: 25px;">
+          <p align="right"><strong><i>compile on</i></strong></p>
+           <p>languages<br>
+           <select name="lang" > 
+        		{% for i in lang %}
+        		    <option value="{{ i.key }}">{{ i.value }}</option> 
+	     		{% endfor %}	
+		</select>
+		</p>
+		</div>
+		<br>
+			<div class="code" align="center">
+				<textarea cols="80" rows="23" name="source_code"  required>input your code</textarea><br>
+				<textarea cols="80" rows="5" name="stdin">stdin</textarea>	<br><br>
+                <input type="submit" value="Submit">
+            </div>
+	     
+	     </form>
+	
+  <footer align="right">
+  <p>Made by:<a href="https://www.facebook.com/dhruv.sharma.756412">Dhruv Sharma</a> 
+   <br>Thanks to <a href="http://ideone.com/">Ideone</a> 
+  </p>
+</footer>
+
+	</body>
+</html>
