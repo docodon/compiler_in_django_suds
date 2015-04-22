@@ -11,8 +11,8 @@ from time import sleep
 
 def home(request) :
 	url='https://ideone.com/api/1/service.wsdl'
-	user='docodon'
-	key='ju#4567'
+	user=''
+	key=''
 	context_dict=dict() 
 	imp = Import('http://schemas.xmlsoap.org/soap/encoding/')  #simply cut-paste but i think it solves the namespace sort of issues   
 	imp.filter.add('http://ideone.com/api/1/service')          #https://fedorahosted.org/suds/ticket/220  (last comment)
